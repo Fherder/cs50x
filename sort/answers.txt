@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: It's faster than sort3 when sorting sorted text files due to the big omega running time ( O(n) )
+
+sort2 uses: Merge sort
+
+How do you know?: It's the fastest of the three algorithms due to the running time being O(n * log(n))
+
+sort3 uses: Selection sort
+
+How do you know?: It's slower than sort1 when sorting sorted text files, due to the running time O(n^2)
