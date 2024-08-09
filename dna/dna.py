@@ -9,13 +9,44 @@ def main():
         print("Error!")
         sys.exit(1)
 
-    # TODO: Read database file into a variable
+    # Read database file into a variable
 
-    # TODO: Read DNA sequence file into a variable
+    STRcountCSV = sys.argv[1]
+    STRcountROWS = []
 
-    # TODO: Find longest match of each STR in DNA sequence
+    with open(STRcountCSV) as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            STRcountROWS.append(row)
 
-    # TODO: Check database for matching profiles
+    # Read DNA sequence file into a variable
+
+    DNAsequenceCSV = sys.argv[2]
+
+    with open(DNAsequenceCSV, 'r') as file:
+        DNAsequence = file.read().strip()
+
+    # Find longest match of each STR in DNA sequence
+
+    strs = list(STRcountROWS[0].keys())[1:]  # Assumes first column is name, rest are STRs
+    longest_matches = {}
+
+    for str_name in strs:
+        longest_matches[str_name] = longest_match(DNAsequence, str_name)
+
+    # Check database for matching profiles
+
+    for row in STRcountROWS:
+        match = True
+        for str_name in strs:
+            if int(row[str_name]) != longest_matches[str_name]:
+                match = False
+                break
+        if match:
+            print(row['name'])
+            break
+    else:
+        print("No match")
 
     return
 
