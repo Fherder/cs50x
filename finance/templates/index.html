@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    <h2>Stock's owned</h2>
+    <hr>
+    <h3>Number of shares owned: {{ number }}</h3>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Total value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock['name'] }}</td>
+                    <td>{{ stock['symbol'] }}</td>
+                    <td>{{ stock['shares'] }}</td>
+                    <td>{{ stock.processed_shares}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <hr>
+    <h3>Cash balance: {{ balance }}</h3>
+    <hr>
+    <h3>Grand total: {{ total }}</h3>
+
+{% endblock %}

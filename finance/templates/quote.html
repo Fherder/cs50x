@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="section">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Enter a stock's symbol" type="text">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+    </form>
+    <hr>
+    <h2>Stock's price</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <main class="container py-5 text-center">
+                {% block main2 %}{% endblock %}
+            </main>
+        </tbody>
+    </table>
+
+{% endblock %}

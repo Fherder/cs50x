@@ -1,0 +1,23 @@
+HTML tags:
+<h1>
+<h2>
+<h3>
+<img>
+<p>
+<div>
+<hr>
+<link>
+<script>
+<ul>
+
+5 CSS properties that were used in the page:
+
+1. scaryBody: It was used in the scary page section.
+2. box: For the style of the main div.
+3. btn-scary: To add some spice to the "scary" part.
+4. scary: This is the font used in all that is scary.
+5. body: I defined the main style of the body.
+
+How did I used bootstrap and Java?
+
+I used Bootstrap for styling the button and the layout, and JavaScript to create an interactive function that hides text, shows a GIF, and changes the button's behavior.

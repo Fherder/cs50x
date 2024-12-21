@@ -1,0 +1,76 @@
+body
+{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #6ee3f4; /* Light background color */
+}
+
+/*For the scary page*/
+.scaryBody
+{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 100vh; /* Full screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container
+{
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Div */
+.box
+{
+    width: 80%; /* Adjust width as needed */
+    max-width: 1000px; /* Optional: limit the maximum width */
+    background-color: white; /* Background color of the rectangle */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Optional padding for inner content */
+}
+
+/*img conf*/
+.photo
+{
+    max-width: 300px;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Scary font styling */
+.scary
+{
+    font-family: 'Creepster', cursive; /* Scary font */
+    color: #ff0000; /* Blood red color */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Creepy shadow */
+    margin-top: 20px;
+}
+
+/* Scary button of index*/
+.btn-scary
+{
+    background-color: #b00f00;
+    border-color: #8a0c0c;
+    color: white;
+}
+
+.btn-scary:hover
+{
+    background-color: #8a0c0c;
+    border-color: #b00f00;
+    color: #fff;
+}
